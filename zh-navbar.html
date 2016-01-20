@@ -124,6 +124,9 @@
 				position: relative;
 				margin-left: 15px;
 			}
+			.header-infor ul,.header-infor li{
+				height: 45px;
+			}
 			.header-infor ul li a img{
 			    width: 25px;
     			height: 25px;
@@ -141,21 +144,26 @@
 			}
 			.header-infor ul ul{ 
 				position: absolute;
-				visibility: hidden;
+				display: none;
 				top: 45px; 
+				height: 155px;
 				background-color: #095fb3;
-				opacity: 0;
 			} 
+			ul li ul li a{
+				margin-top: 10px;
+				display: block;
+				font-size: 14px;
+			}
 			.header-infor li:hover > ul{ 
-				position: absolute; 
-				visibility: visible;
-				opacity: 1;
+				display: block;
 			} 
-			.header-infor ul ul li{ 
-				width: 120px;
+			.header-infor ul li ul li{ 
+				width: 80px;
 				height: 40px;
 				background-color: #095fb3;
-				text-align: center;
+				padding-left: 40px; 
+				border-top: 1px solid #666;
+				border-radius: 4px;
 			} 
 			.clear:after{
 				clear:both;
