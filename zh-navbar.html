@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
 		<title>zhihu</title>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 		<style>
 			*{
 				margin:0;
@@ -59,6 +60,10 @@
 				border: 1px solid #045bb2;
 				border-radius: 4px;
 				box-shadow: inset 0 1px 3px rgba(0,0,0,.2),0 1px 0 rgba(255,255,255,.1);
+				-webkit-tap-highlight-color:rgba(225,225,225,.5);
+			}
+			.header-form form input:focus{
+				background-color: #fff;
 			}
 			.btn{
 				background: linear-gradient(to bottom,#0e7bef,#0d73da);
@@ -75,6 +80,7 @@
 				height: 32px;
 			    top: 0;
     			right: 0;
+    			padding-left: 12px;
     			line-height: 17px;
 				border-top-left-radius: 0;
 				border-bottom-left-radius: 0;
@@ -146,25 +152,34 @@
 				position: absolute;
 				display: none;
 				top: 45px; 
-				height: 155px;
+				height: 143px;
 				background-color: #095fb3;
 			} 
 			ul li ul li a{
-				margin-top: 10px;
 				display: block;
+				padding:15px 22px 14px 16px;
 				font-size: 14px;
+				border-radius: 4px;
+			}
+			.header-infor li:hover{
+				background: linear-gradient(to bottom,#055fb8,#095fb3); 
 			}
 			.header-infor li:hover > ul{ 
 				display: block;
 			} 
 			.header-infor ul li ul li{ 
-				width: 80px;
-				height: 40px;
 				background-color: #095fb3;
-				padding-left: 40px; 
-				border-top: 1px solid #666;
+				border-top: 1px solid #0D5AA5;
 				border-radius: 4px;
+				cursor: pointer;
 			} 
+			ul li ul li a:hover{
+				background-color: #0267cc;
+			}
+			.fa{
+				color: #fff;
+				margin-right: 15px;
+			}
 			.clear:after{
 				clear:both;
 			}
@@ -180,7 +195,7 @@
 				<div class="header-form header-left">
 					<form>
 						<input type="text" placeholder="搜索问题、话题或人">
-						<button class="btn btn-search" type="submit">搜索<span></span></button>
+						<button class="btn btn-search" type="submit"><i class="fa fa-search"></i></button>
 					</form>
 				</div>
 				<nav class="header-nav header-left">
@@ -193,12 +208,12 @@
 				</nav>
 				<div class="header-infor header-right">
 					<ul>
-						<li><a href=""><img src="" alt="头像"><span>FantasyDL</span></a>
+						<li><a href=""><img src="" alt="头像"><span>许谦</span></a>
 							<ul>
-								<li><a href="">我的主页</a></li>
-								<li><a href="">私信</a></li>
-								<li><a href="">设置</a></li>
-								<li><a href="">退出</a></li>
+								<li><a href=""><i class="fa fa-user"></i>我的主页</a></li>
+								<li><a href=""><i class="fa fa-envelope-o"></i>私信</a></li>
+								<li><a href=""><i class="fa fa-cog"></i>设置</a></li>
+								<li><a href=""><i class="fa fa-power-off"></i>退出</a></li>
 							</ul>
 						</li>
 					</ul>
