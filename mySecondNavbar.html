@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<title>mySecondNavbar</title>
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				max-width: 100%;
+			}
+			ul{
+				height: 30px;
+				padding-left: 50px;
+				list-style-type: none;
+				border-bottom: 5px solid orange;
+			}
+			ul li{
+				float: left;
+			}
+			ul li a{	
+				display: block;
+				height: 30px;
+				width: 120px;
+				margin-left: 1px;
+				background-color: #efefef;
+				line-height: 30px;
+				text-align: center;
+				text-decoration: none;
+				border-top-left-radius: 4px;
+				border-top-right-radius: 4px;
+			}
+			.on,a:hover{
+				height: 30px;
+				color: #fff;
+				background-color: orange;
+				line-height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul>
+					<li><a class="on" href="">首&nbsp&nbsp页</a></li>
+					<li><a href="">新闻快讯</a></li>
+					<li><a href="">产品浏览</a></li>
+					<li><a href="">售后服务</a></li>
+					<li><a href="">联系我们</a></li>
+				</ul>
+			</nav>
+		</header>
+	</body>
+	<!--<script type="text/javascript">
+			window.onload = function(){
+				var aA = document.getElementsByTagName('a');
+				for (var i = 0; i < aA.length ; i++) {
+					aA[i].onmouseover = function(){
+						clearInterval(this.time);
+						var This = this;
+						This.time = setInterval(function(){
+							This.style.width = This.offsetWidth+8+"px";
+							if(This.offsetWidth >= 120){
+								clearInterval(This.time)
+							}
+						},40)
+					}
+					aA[i].onmouseout = function(){
+						clearInterval(this.time);
+						var This = this;
+						This.time = setInterval(function(){
+							This.style.width = This.offsetWidth-8+"px";
+							if(This.offsetWidth <= 104){
+								This.style.width = "120px";
+								clearInterval(This.time)
+							}
+						},40)
+					}
+				}
+			}
+		</script>-->
+		<script type="text/javascript">
+			$(function(){
+				$('a').hover(
+					function(){
+						$(this).stop().animate({"width":"160px"},200);
+					},
+					function(){
+						$(this).stop().animate({"width":"122px"},200);
+					})
+				})
+				
+		</script>
+</html>
