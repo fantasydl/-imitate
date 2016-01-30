@@ -17,8 +17,10 @@ function draw(){
 		event =event || window.event;
 		if(event.keyCode == 13){
 			if(flag == 0){
+				flag = 1;
 				rStart();
 			}else if(flag == 1){
+				flag = 0;
 				rStop();
 			}
 		}
@@ -37,14 +39,11 @@ function rStart(){
 
 	play.style.backgroundColor = "#999";
 	play.style.cursor = "not-allowed";
-	flag = 1;
-
 }
 
 function rStop(){
 	clearInterval(stt);
 
 	play.style.backgroundColor = "#036";
-	play.style.cursor = "pointer";
-	flag = 0;
+	play.style.cursor = "pointer";	
 }
