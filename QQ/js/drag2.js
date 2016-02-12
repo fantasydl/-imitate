@@ -78,8 +78,8 @@ function fnDown(event){
 	}
 	// 释放鼠标
   	document.onmouseup=function(){
-  	document.onmousemove=null;
-  	document.onmouseup=null;
+  	   document.onmousemove=null;
+  	   document.onmouseup=null;
   	}
 }
 
